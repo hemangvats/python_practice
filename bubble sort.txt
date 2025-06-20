@@ -1,0 +1,29 @@
+# Hemang Vats,XII-A, Bubble Sort
+def bubblesort(list1):
+    i=0
+    j=0
+    n=len(list1)
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if list1[j]>list1[j+1]:
+                list1[j],list1[j+1]=list1[j+1],list1[j]
+    return(list1)
+l=[]
+n=int(input('Enter number of elements you want to add:'))
+for x in range(0,n):
+    num=int(input('Enter the number:'))
+    l.append(num)
+print('The list before sorting is:',l)
+Sort=bubblesort(l)
+print('The sorted list is:',Sort)
+
+Output:
+Enter number of elements you want to add:6
+Enter the number:9
+Enter the number:4
+Enter the number:7
+Enter the number:5
+Enter the number:10
+Enter the number:8
+The list before sorting is: [9, 4, 7, 5, 10, 8]
+The sorted list is: [4, 5, 7, 8, 9, 10]
